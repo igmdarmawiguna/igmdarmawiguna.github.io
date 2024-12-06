@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional Profile of Ir. I Gede Mahendra Darmawiguna, S.Kom., M.Sc.">
     <meta name="author" content="I Gede Mahendra Darmawiguna">
-    <title>Professional Profile | I Gede Mahendra Darmawiguna</title>
+    <title>I Gede Mahendra Darmawiguna | Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,10 +17,27 @@
             color: #333;
         }
         header {
-            background-color: #004d99;
+            position: relative;
+            overflow: hidden;
+        }
+        .slider {
+            width: 100%;
+            height: 300px;
+        }
+        .slider img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .slider .caption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.5);
             color: white;
-            padding: 1.5em 0;
-            text-align: center;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
         }
         nav {
             background-color: #003366;
@@ -47,37 +66,30 @@
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
-        .section h2 {
-            margin-top: 0;
-        }
-        .profile-header {
-            display: flex;
-            align-items: center;
-        }
-        .profile-header img {
-            border-radius: 50%;
-            max-width: 150px;
-            margin-right: 20px;
-        }
         footer {
             background-color: #004d99;
             color: white;
             text-align: center;
             padding: 1em 0;
         }
-        .contact-links a {
-            color: #004d99;
-            text-decoration: none;
-        }
-        .contact-links a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Professional Profile</h1>
-        <p>Ir. I Gede Mahendra Darmawiguna, S.Kom., M.Sc.</p>
+        <div class="slider">
+            <div>
+                <img src="https://via.placeholder.com/1200x300?text=Preserving+Balinese+Heritage" alt="Preserving Balinese Heritage">
+                <div class="caption">Preserving Balinese Cultural Heritage</div>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/1200x300?text=Advancing+Education+Through+Technology" alt="Advancing Education">
+                <div class="caption">Advancing Education through Technology</div>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/1200x300?text=Innovating+with+AR+and+VR" alt="Innovating with AR and VR">
+                <div class="caption">Innovating with Virtual and Augmented Reality</div>
+            </div>
+        </div>
     </header>
     <nav>
         <a href="#about">About</a>
@@ -88,15 +100,10 @@
     </nav>
     <div class="container">
         <section id="about" class="section">
-            <div class="profile-header">
-                <img src="profile.jpg" alt="Photo of I Gede Mahendra Darmawiguna">
-                <div>
-                    <h2>About Me</h2>
-                    <p>
-                        Lecturer at Universitas Pendidikan Ganesha, specializing in Virtual and Augmented Reality, Data Mining, and Educational Technology. Experienced professional with significant contributions in research, education, and digital heritage preservation.
-                    </p>
-                </div>
-            </div>
+            <h2>About Me</h2>
+            <p>
+                Lecturer at Universitas Pendidikan Ganesha, specializing in Virtual and Augmented Reality, Data Mining, and Educational Technology. Experienced professional with significant contributions in research, education, and digital heritage preservation.
+            </p>
         </section>
         <section id="education" class="section">
             <h2>Education</h2>
@@ -104,7 +111,6 @@
                 <li><strong>Professional Engineer Program:</strong> University of Udayana, 2024, GPA: 4.00</li>
                 <li><strong>Master of Science in Computer Science:</strong> University of Mysore, 2010, GPA: 9.5/10</li>
                 <li><strong>Bachelor of Science in Information Technology:</strong> President University, 2007, GPA: 3.47/4.00</li>
-                <li><strong>Science Major:</strong> Taruna Nusantara Senior High School, 2003</li>
             </ul>
         </section>
         <section id="experience" class="section">
@@ -113,7 +119,6 @@
                 <li><strong>Lecturer:</strong> Universitas Pendidikan Ganesha (2010 - Present)</li>
                 <li><strong>Founder & CIO:</strong> CV. Ganesha Inovasi Teknologi (2022 - Present)</li>
                 <li><strong>Commissioner:</strong> PT. Ganeshcom Mitra Solusi Digital (2017 - Present)</li>
-                <li><strong>IT Consultant:</strong> Parama Sidhi General Hospital (2013 - Present)</li>
             </ul>
         </section>
         <section id="publications" class="section">
@@ -121,17 +126,32 @@
             <ul>
                 <li><strong>Acquisition and Processing of Motor Imagery and Motor Execution Dataset (MIMED):</strong> Data in Brief, 2024.</li>
                 <li><strong>Lont-AR: Augmented Reality Technology for Balinese Sculptures:</strong> INSERT Journal, 2022.</li>
-                <li>For a complete list of publications, visit my <a href="https://scholar.google.com/citations?user=TYNXprAAAAAJ&hl=en" target="_blank">Google Scholar</a> profile.</li>
             </ul>
         </section>
         <section id="contact" class="section">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:mahendra.darmawiguna@undiksha.ac.id">mahendra.darmawiguna@undiksha.ac.id</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/igmdarmawiguna/" target="_blank">https://www.linkedin.com/in/igmdarmawiguna/</a></p>
         </section>
     </div>
     <footer>
         <p>&copy; 2024 I Gede Mahendra Darmawiguna. All Rights Reserved.</p>
     </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear',
+                autoplay: true,
+                autoplaySpeed: 4000,
+            });
+        });
+    </script>
 </body>
 </html>
