@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="260" viewBox="0 0 920 260">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#7a4a20" stroke-width="0.4" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="920" height="260" fill="#f0dcc8"/>
+  <rect width="920" height="260" fill="url(#grid)"/>
+  <circle cx="120" cy="130" r="60" fill="#7a4a20" opacity="0.12"/>
+  <circle cx="800" cy="130" r="80" fill="#7a4a20" opacity="0.08"/>
+  <circle cx="460" cy="30" r="50" fill="#7a4a20" opacity="0.06"/>
+  <text x="460" y="122" font-family="Georgia, serif" font-size="22" fill="#7a4a20" text-anchor="middle" opacity="0.9">AR Story Book · Balinese Myths</text>
+  <text x="460" y="152" font-family="Arial, sans-serif" font-size="13" fill="#7a4a20" text-anchor="middle" opacity="0.5">[ Replace with actual image ]</text>
+</svg>
