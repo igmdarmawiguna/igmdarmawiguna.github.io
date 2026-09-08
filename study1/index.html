@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>When Temples Travel — Study 1 Visuals</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <h1>When Temples Travel — Study 1 Visuals</h1>
+  <p class="sub">Sankey diagrams and thematic hierarchy table, from the RefineThematicHierarchy sheet.</p>
+  <nav>
+    <button class="tab-btn active" data-view="faceted">Sub-theme Breakdown</button>
+    <button class="tab-btn" data-view="simplified">Participant Reach</button>
+    <button class="tab-btn" data-view="table">Table</button>
+  </nav>
+</header>
+
+<main>
+  <section id="view-faceted" class="view active">
+    <p class="sub">Theme &#8594; Sub-theme (link width = Core Thematic Segments) &#8594; Auth/Diasp reach, one panel per theme.</p>
+    <div id="grid"></div>
+    <p class="note">Note: the Theme &#8594; Sub-theme tier conserves core segment counts within each theme. The Sub-theme &#8594; Auth/Diasp tier uses participant counts instead, a different unit, so a sub-theme's outgoing width to participants will not equal its incoming width from the theme.</p>
+  </section>
+
+  <section id="view-simplified" class="view">
+    <p class="sub">Each theme's Authority and Diaspora participant counts, taken directly from the de-duplicated Presentation Summary totals (not summed across sub-themes, to avoid double-counting a participant coded under multiple sub-themes of the same theme).</p>
+    <div id="chart-simplified"></div>
+    <p class="note">Note: Authority and Diaspora use different denominators (n/3 vs n/6), so link widths are comparable within a colour (Authority-to-Authority, Diaspora-to-Diaspora) but not directly across the two.</p>
+  </section>
+
+  <section id="view-table" class="view">
+    <input id="search" type="text" placeholder="Search theme, sub-theme, consideration...">
+    <div class="table-wrap">
+      <table class="data" id="hierarchy-table">
+        <thead>
+          <tr>
+            <th data-key="theme_id">Theme</th>
+            <th data-key="sub_id">Sub</th>
+            <th data-key="sub_name">Sub-theme</th>
+            <th data-key="captures" class="wrap">What the Sub-theme Captures</th>
+            <th data-key="core" class="num">Core</th>
+            <th data-key="pct_theme" class="num">% Theme</th>
+            <th data-key="auth" class="num">Auth.</th>
+            <th data-key="dias" class="num">Dias.</th>
+            <th data-key="guardrail" class="wrap">Guardrail Direction (Bridge, not final wording)</th>
+            <th data-key="emp_primary">Emp. Primary</th>
+            <th data-key="emp_secondary">Emp. Secondary</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="note">Core = Core Thematic Segments (coding density, not prevalence/consensus). % Theme = share of that sub-theme's parent theme's core segments. Auth./Dias. = Authority (n/3) / Diaspora (n/6) participant counts. Click a column header to sort.</p>
+  </section>
+</main>
+
+<div id="tooltip"></div>
+
+<!-- Vendor libraries -->
+<script src="js/lib/d3.min.js"></script>
+<script src="js/lib/d3-sankey.min.js"></script>
+
+<!-- Data (Model's raw source) -->
+<script src="js/data/subThemeData.js"></script>
+<script src="js/data/themeData.js"></script>
+<script src="js/data/tableData.js"></script>
+<script src="js/data/themeColors.js"></script>
+
+<!-- Model -->
+<script src="js/models/dataModel.js"></script>
+
+<!-- Views -->
+<script src="js/views/tooltip.js"></script>
+<script src="js/views/facetedSankeyView.js"></script>
+<script src="js/views/simplifiedSankeyView.js"></script>
+<script src="js/views/tableView.js"></script>
+
+<!-- Controller (wires everything together, kicks off on DOMContentLoaded) -->
+<script src="js/controllers/appController.js"></script>
+
+</body>
+</html>
